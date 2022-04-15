@@ -1,9 +1,42 @@
+.h2_f{
+    text-align: center;
+}
+.p_f{
+    text-align: center;
+    font-size: 19px;
+    margin-top: 25px;
+}
+.p_f2{
+    text-align: center;
+    margin: 0;
+    font-size: 15px;
+}
+.p_contact_f{
+    text-align: center;
+}
+
+.icon_footer_f{
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer_f{
+    margin-top: 30px;
+    display: flex;
+}
+
+li:hover{
+    color: white;
+}
+#bloc-0 .hover_navbar:hover{
+    color: rgb(243 151 108);
+}
 body {
     margin: 0;
     padding: 0;
     background: #FFF;
     overflow-x: hidden;
-    -webkit-font-smoothing: antialiased;
+    -webkit-font-smoothing: antialiased;²
     -moz-osx-font-smoothing: grayscale;
 }
 
@@ -88,11 +121,6 @@ a:hover {
     bottom: 0;
     left: 0;
     right: 0;
-}
-
-.texture-paper::before {
-    background: url("img/texture-paper.png");
-    background-size: 280px 280px;
 }
 
 .b-parallax {
@@ -369,6 +397,16 @@ a:hover {
         right: 20px;
         transform: translate(0, -50%);
         -webkit-transform: translateY(-50%);
+    }
+    .navbar-nav .open .dropdown-menu {
+        position: static !important;
+        float: none !important;
+        width: auto !important;
+        margin-top: 0 !important;
+        background-color: transparent !important;
+        border: 0 !important;
+        -webkit-box-shadow: none !important;
+        box-shadow: none !important;
     }
     .nav > li .dropdown-menu a,
     .nav > li .dropdown-menu a:hover {
@@ -651,7 +689,7 @@ label,
 a {
     font-family: "helvetica";
     font-weight: 400;
-    color: #575757!important;
+    color: #575757;
 }
 
 .container {
@@ -674,10 +712,6 @@ a {
     font-weight: lighter;
     max-width: 520px;
     margin: auto auto auto auto;
-}
-
-p {
-    font-size: 11px;
 }
 
 .tight-width-whitespace {
@@ -744,6 +778,7 @@ h4 {
 }
 
 .portfolio-row {
+    display: flex;
     margin-bottom: 44px;
     margin-top: 50px;
 }
@@ -775,7 +810,7 @@ h4 {
 }
 
 .tc-white {
-    color: #F3976C!important;
+    color: white!important;
 }
 
 .btn-atomic-tangerine {
@@ -822,7 +857,7 @@ h4 {
 }
 
 .bg-presentation {
-    background-image: url("img/image-de-presentation.bmp");
+    background-image: url("img/image-de-presentation_3.jpg");
 }
 
 @media (max-width: 1024px) {
@@ -867,7 +902,7 @@ h4 {
     .b-parallax {
         background-attachment: scroll;
     }
-    .page-container,
+    
     #hero-bloc {
         overflow-x: hidden;
         position: relative;
@@ -889,11 +924,33 @@ h4 {
     }
 }
 
-@media (max-width: 767px) {
-    .page-container {
-        overflow-x: hidden;
-        position: relative;
+@media (min-width: 767px) and (max-width: 768px) {
+    .navbar-collapse{
+        padding-right: 0px;
+        padding-left: 0px;
+        margin-left: -15px;
     }
+    .site-navigation{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        margin-right: 0px !important;
+    }
+    .site-navigation li{
+        background-color: #f2f2f2;
+        width: 100%;
+        border: 1px solid rgba(0, 0, 0, .2);
+        margin-top: 0px;
+    }
+    .site-navigation li:nth-child(2n){
+        border-top: none;
+    }
+
+}
+
+@media (max-width: 767px) {
+    
     h1,
     h2,
     h3,
@@ -1025,6 +1082,12 @@ h4 {
     .blocsapp-device-iphone5 img {
         width: 180px;
         height: 320px;
+    }
+}
+@media (max-width: 585px){
+    .footer_f{
+        flex-direction: column;
+        margin-left: 15px;
     }
 }
 
